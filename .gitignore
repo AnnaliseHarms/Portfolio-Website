@@ -1,0 +1,11 @@
+# Personal documents 
+Summary.docx
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
