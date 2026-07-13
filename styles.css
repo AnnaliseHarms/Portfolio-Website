@@ -1,1 +1,485 @@
 /* Appearance: color, fonts, layout, hover effects, animations*/
+
+/*Applys to whole document */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling when clicking nav links, offset for the sticky header */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 64px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/*Navigation Bar*/
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    background-color: rgba(250, 248, 244, 0.95);
+    border-bottom: 1px solid rgba(26, 23, 20, 0.1);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 1152px;
+    height: 64px;
+
+    margin: 0 auto;
+    padding: 0 0px;
+}
+
+.logo {
+    color: #1a1714;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.01em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    margin-left: auto;
+}
+
+.nav-links a {
+    color: #7a766c;
+
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #1a1714;
+}
+
+.cv-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 28px;
+    padding: 8px 16px;
+
+    background-color: #22204a;
+    color: #faf8f4;
+
+    border: none;
+    border-radius: 0;
+
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    letter-spacing: 0.08em;
+
+    transition: opacity 0.2s ease;
+}
+
+.cv-btn:hover {
+    opacity: 0.9;
+}
+
+/* Introduction Section */
+.introduction {
+    width: 100%;
+    /* Left/right match the logo's position in the 1152px nav container */
+    padding: 48px max(0px, calc((100vw - 1152px) / 2)) 60px;
+
+    background-color: #faf8f4;
+}
+
+/* "Annalise Harms" */
+.introduction h1 {
+    max-width: 520px;
+    margin: 20px 0 36px;
+
+    font-family: "Fraunces", serif;
+    font-weight: 650;
+    font-size: 7rem;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+
+    color: #171310;
+}
+
+/* "Junior Data Analyst - Munich" */
+.introduction h2 {
+    margin: 0 0 24px;
+
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.68rem;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+
+    color: #22204a;
+}
+
+/* "A few sentences about me." */
+.introduction p {
+    max-width: 570px;
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.08rem;
+    font-weight: 400;
+    line-height: 1.55;
+
+    color: #777168;
+}
+
+/* About Me Section*/
+.about {
+    width: 100%;
+    padding: 72px 40px 80px;
+
+    background-color: #f2eee6;
+}
+
+/* Keeps the text aligned with the rest of the page */
+.about {
+    width: 100%;
+    margin: 0;
+    padding-top: 72px;
+    /* Left/right match the logo's position in the 1152px nav container */
+    padding-right: max(0px, calc((100vw - 1152px) / 2));
+    padding-bottom: 80px;
+    padding-left: max(0px, calc((100vw - 1152px) / 2));
+
+    background-color: #f2eee6;
+}
+
+/* Small "ABOUT" label */
+.about h2 {
+    margin-bottom: 18px;
+
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.68rem;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+
+    color: #22204a;
+}
+
+/* "A little about me" */
+.about h3 {
+    margin-bottom: 54px;
+
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+
+    color: #171310;
+}
+
+/* About paragraphs */
+.about p {
+    max-width: 100%;
+    margin-bottom: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.65;
+
+    color: #837b70;
+}
+
+/* Removes extra space after the final paragraph */
+.about p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* YouTube video */
+.about iframe {
+    display: block;
+
+    width: 100%;
+    max-width: 760px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+
+    margin-top: 48px;
+
+    border: 0;
+}
+
+/* Aligns the remaining sections with the logo until they get their own styles */
+.experience,
+.projects,
+.contact {
+    width: 100%;
+    /* Left/right match the logo's position in the 1152px nav container */
+    padding: 72px max(0px, calc((100vw - 1152px) / 2)) 80px;
+}
+
+/*Experience Section*/
+.experience {
+    background-color: #faf8f4;
+}
+
+.experience h2 {
+    margin-bottom: 18px;
+
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.68rem;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+
+    color: #22204a;
+}
+
+.experience h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 48px;
+}
+
+.job {
+    display: grid;
+    /* grid-template-columns: 100px 24px 1fr; */
+    grid-template-columns: 160px 24px 1fr;
+
+    gap: 0 24px;
+    position: relative;
+    padding-bottom: 32px;
+}
+
+.job-date {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: #888;
+    padding-top: 4px;
+}
+
+.job-marker {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.job-marker::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    bottom: -32px;
+    width: 1px;
+    background: #ddd;
+}
+
+.job:last-child .job-marker::before {
+    display: none;
+}
+
+.job-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #999;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.job-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.job-header h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.2rem;
+}
+
+.job-tag {
+    background: #eee;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-family: monospace;
+}
+
+.job-description {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding-left: 20px;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.4s ease;
+}
+
+.job-description li {
+    list-style: disc;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.job.active .job-description {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 12px;
+}
+
+.job.active .job-dot {
+    background: #111;
+    border-color: #111;
+}
+
+/*Contact Section*/
+.contact {
+    background-color: #faf8f4;
+}
+
+.contact h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    font-size: 0.68rem;
+    font-family: "Courier New", Courier, monospace;
+    color: #22204a;
+    margin-bottom: 18px;
+}
+
+.contact h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #171310;
+    margin-bottom: 48px;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+
+    padding: 20px 24px;
+    border-right: 1px solid rgba(23, 19, 16, 0.1);
+
+    color: #171310;
+    font-family: "DM Mono", monospace;
+    font-size: 0.95rem;
+
+    transition: opacity 0.2s ease;
+}
+
+.contact-row:last-child {
+    border-right: none;
+}
+
+a.contact-row:hover {
+    opacity: 0.6;
+}
+
+.contact-copy-btn.copied {
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    margin-right: 12px;
+
+    background-color: #22204a;
+    color: #faf8f4;
+
+    font-size: 0.9rem;
+    line-height: 1;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+.contact-label {
+    font-weight: 600;
+}
+
+/* Keep the email address on a single line */
+#email-text {
+    white-space: nowrap;
+    margin-right: 12px;
+}
+
+.contact-arrow {
+    margin-left: 6px;
+    font-size: 1.2rem;
+}
+
+
+.contact-copy-btn {
+    margin-left: 4px;
+    background: none;
+    border: none;
+    color: #171310;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* Footer Section */
+.footer {
+    padding: 16px 20px;
+    text-align: center;
+
+    background-color: #f2eee6;
+}
+
+.footer p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    color: #837b70;
+}

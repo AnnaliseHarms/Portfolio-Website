@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Annalise Harms | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -54,28 +58,47 @@
     <section class="experience" id="experience">
         <h2>Experience</h2>
         <h3>Where I have worked</h3>
+        <div class="job">
+            <div class="job-date">Jun 2024 – June 2025, Aug 2025 - Mar 2026 </div>
+            <div class="job-marker"><span class="job-dot"></span></div>
+            <div class="job-details">
+                <div class="job-header">
+                    <h4>Office of Strategic Initiatives Intern</h4>
+                    <span class="job-tag">University of Illinois</span>
+                </div>
+                <ul class="job-description">
+                    <li>Designed and implemented a survey system for a 17 high school pilot program focused on expanding access to virtual higher education for underprivileged students</li>
+                    <li>Translated comprehensive student data from all participating schools into Power BI dashboards that revealed program-wide trends and insights, helping secure a USD 750,000 grant to continuously fund the program</li>
+                    <li>Developed a comprehensive business plan for the University of Illinois proposing a system-wide data and delivery framework to track non-credit learners and expand the university’s lifelong learning ecosystem</li>
+                    <li>Conducted stakeholder interviews with 10+ university departments to support migration to a new alumni communication platform </li>
+                </ul>
+            </div>
+        </div>
 
         <div class="job">
-            <div class="job-date">Jun 2024 - Jun 2025, Aug 2025 - Mar 2026</div>
+            <div class="job-date">Dec 2025 – Feb 2026</div>
+            <div class="job-marker"><span class="job-dot"></span></div>
             <div class="job-details">
-                <h4>Office of Strategic Initiatives Intern</h4>
-                <p class="job-company">University of Illinois</p>
-                <ul>
-                    <!-- Bullet Points-->
-                    <li>Designed and implemented a survey system for 17 high school pilot programs focused on expanding access to virtual higher education for underprivileged students</li>
-                    <li>Translated comprehensive student data from all participating schools into Power BI dashboards that revealed program-wide trends and insights, helping secure a USD 750,000 grant to continuously fund the program</li>
-                    <li>Developed a comprehensive business plan for the University of Illinois proposing a system-wide data and delivery framework to track non-credit learners and expand the university's lifelong learning ecosystem</li>
-                    <li>Conducted stakeholder interviews with 10+ university departments to support migration to a new alumni communication platform</li>
+                <div class="job-header">
+                    <h4>Technology Consultant</h4>
+                    <span class="job-tag">Target Technology Department</span>
+                </div>
+                <ul class="job-description">
+                    <li>Assisted customers with selecting consumer electronics by explaining technical specifications, comparing product features, and recommending solutions based on customer needs and budgets</li>
+                    <li>Maintained product organization and shelf restocking to keep electronics inventory accessible and well presented</li>
                 </ul>
             </div>
         </div>
 
         <div class="job">
             <div class="job-date">Jun 2025 – Dec 2025</div>
+            <div class="job-marker"><span class="job-dot"></span></div>
             <div class="job-details">
-                <h4>Software Engineering Intern</h4>
-                <p class="job-company">SPARQ AI Solutions</p>
-                <ul>
+                <div class="job-header">
+                    <h4>Software Engineering Intern</h4>
+                    <span class="job-tag">SPARQ AI Solutions</span>
+                </div>
+                <ul class="job-description">
                     <li>Designed and managed PostgreSQL databases for an automotive software platform by developing normalized data models that eliminated redundancy, improved performance, and supported evolving business requirements</li>
                     <li>Collaborated with clients to gather requirements and applied their input to guide database design decisions</li>
                     <li>Coordinated with a team of four developers in an Agile (Scrum) workflow, using Jira to manage sprints, track progress, and coordinate tasks</li>
@@ -115,15 +138,35 @@
         <h3>Get in touch</h3>
 
         <div class="contact-links">
-            <!-- target="_blank" : open in new tab-->
-            <a href="https://github.com/AnnaliseHarms?tab=repositories" target="_blank">→ GitHub</a> 
-            <a href="https://www.linkedin.com/in/annaliseharms/" target="_blank">→ LinkedIn</a>
-            <div class="email-row">
-                <span id="email-text">annaliseharms@email.com</span>
-                <button id="copy-email-btn">Copy Email</button>
+            <a href="https://www.linkedin.com/in/annaliseharms/" target="_blank" class="contact-row">
+                <span class="contact-icon">in</span>
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-arrow">↗</span>
+            </a>
+
+            <a href="https://github.com/AnnaliseHarms?tab=repositories" target="_blank" class="contact-row">
+                <span class="contact-icon">GH</span>
+                <span class="contact-label">GitHub</span>
+                <span class="contact-arrow">↗</span>
+            </a>
+
+            <div class="contact-row">
+                <span class="contact-icon">✉</span>
+                <span class="contact-label" id="email-text">annaliseharms@gmail.com</span>
+                <button id="copy-email-btn" class="contact-copy-btn">⧉</button>
+            </div>
+
+            <div class="contact-row">
+                <span class="contact-icon">☎</span>
+                <span class="contact-label">+49 152 24695576</span>
             </div>
         </div>
     </section>
+
+    <!-- Footer Section-->
+    <footer class="footer">
+        <p>Designed and coded by Annalise Harms, with help from Claude</p>
+    </footer>
 
 <!-- Connects HTML with js file-->
 <script src="script.js"></script>
