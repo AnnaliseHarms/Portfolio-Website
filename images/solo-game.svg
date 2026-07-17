@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Solo Game preview">
+  <rect width="800" height="500" fill="#3f3d54"/>
+  <g fill="none" stroke="#faf8f4" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="270" y="195" width="260" height="120" rx="60"/>
+    <path d="M330 235V275M310 255H350"/>
+  </g>
+  <g fill="#faf8f4">
+    <circle cx="470" cy="245" r="12"/>
+    <circle cx="500" cy="275" r="12"/>
+  </g>
+  <text x="400" y="410" text-anchor="middle" fill="#faf8f4" font-family="Georgia, serif" font-size="42" font-weight="700">Solo Game</text>
+</svg>

@@ -1,5 +1,5 @@
 <!-- Structure and Content: Text, headings, buttons, etc.-->
- 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Annalise Harms | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Minesweeper-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Minesweeper/minesweeper.css">
 
     <!-- Google Font-->
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&display=swap" rel="stylesheet">
@@ -24,34 +28,39 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <a href="CV.pdf" download class="cv-btn">Download CV</a>
+            <a href="Annalise_Harms_CV.pdf" download class="cv-btn">Download CV</a>
         </nav>
     </header>
 
     <section class="introduction">
         <h1>Annalise Harms</h1>
-        <h2>Junior Data Analyst - Munich</h2>
-        <p>A few sentences about me.</p>
+        <h2>DATA ANALYTICS • BUSINESS INTELLIGENCE • SOFTWARE DEVELOPMENT</h2>
+        <p>Curiosity is what drew me to computer science, and data is where I've found it most rewarding. I enjoy exploring complex information and turning it into something useful.</p>
     </section>
 
     <!-- About Section-->
     <section class="about" id="about"> <!--id links to navigation -->
         <h2>About</h2>
         <h3>A little about me</h3>
-        <p>Intro paragraph 1</p>
-        <p>Intro paragraph 2</p>
-        <p>Intro paragraph 3</p>
 
-        <!-- For embedding Youtube Video-->
-        <iframe  
-            width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-        </iframe>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hi! I'm Annalise Harms. I'm based in Munich and hold a bachelor's degree in Computer Science.</p>
+                <p>I'm currently looking to further my career in data analytics or business intelligence, where I can combine technical skills with analytical thinking to solve problems and help teams make informed decisions.</p>
+                <p>Outside of work, you'll usually find me on a badminton court, getting lost in a fantasy novel, or exploring Munich. I enjoy learning new things, meeting new people, and finding the next project to dive into.</p>
+            </div>
+
+            <!-- For embedding Youtube Video-->
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
     </section>
 
     <!-- Experience Section-->
@@ -59,7 +68,7 @@
         <h2>Experience</h2>
         <h3>Where I have worked</h3>
         <div class="job">
-            <div class="job-date">Jun 2024 – June 2025, Aug 2025 - Mar 2026 </div>
+            <div class="job-date">Aug 2025 - Mar 2026, Jun 2024 – June 2025</div>
             <div class="job-marker"><span class="job-dot"></span></div>
             <div class="job-details">
                 <div class="job-header">
@@ -68,7 +77,7 @@
                 </div>
                 <ul class="job-description">
                     <li>Designed and implemented a survey system for a 17 high school pilot program focused on expanding access to virtual higher education for underprivileged students</li>
-                    <li>Translated comprehensive student data from all participating schools into Power BI dashboards that revealed program-wide trends and insights, helping secure a USD 750,000 grant to continuously fund the program</li>
+                    <li>Translated comprehensive student data from all participating schools into Power BI dashboards that revealed program-wide trends and insights, helping secure a $750,000 grant to continuously fund the program</li>
                     <li>Developed a comprehensive business plan for the University of Illinois proposing a system-wide data and delivery framework to track non-credit learners and expand the university’s lifelong learning ecosystem</li>
                     <li>Conducted stakeholder interviews with 10+ university departments to support migration to a new alumni communication platform </li>
                 </ul>
@@ -112,25 +121,103 @@
         <h2>Projects</h2>
         <h3>Selected work</h3>
 
-        <div class="project">
-            <h4>Project Title 1</h4>
-            <p>Short description of what this project does and what problem it solves.</p>
-            <p class="project-tools">Tools used: Tool 1, Tool 2, Tool 3</p>
-        </div>
+        <div class="projects-grid">
+            <div class="project-card" data-project="minesweeper" role="button" tabindex="0" aria-label="Open Minesweeper project">
+                <div class="project-image">
+                    <video class="project-video" muted loop playsinline preload="auto"
+                        src="Videos/Minesweeper%20Video.mp4#t=0.5"></video>
+                </div>
+                <span class="project-label">Game Development</span>
+                <h4>Minesweeper</h4>
+                <p>A recreation of the classic game</p>
+            </div>
 
-        <div class="project">
-            <h4>Project Title 2</h4>
-            <p>Short description of what this project does and what problem it solves.</p>
-            <p class="project-tools">Tools used: Tool 1, Tool 2, Tool 3</p>
-        </div>
+            <div class="project-card" data-project="powerbi" role="button" tabindex="0" aria-label="Open Power BI project">
+                <div class="project-image">
+                    <video class="project-video" muted loop playsinline preload="auto"
+                      src="Videos/PBI%20Video.mp4#t=0.5"></video>
+                </div>
+                <span class="project-label">Data Analytics</span>
+                <h4>Student Analytics Dashboard</h4>
+                <p>Interactive Power BI dashboard developed to support a statewide pilot program aimed at expanding access to higher education for underprivileged middle and high school students</p>
+            </div>
 
-        <div class="project">
-            <h4>Project Title 3</h4>
-            <p>Short description of what this project does and what problem it solves.</p>
-            <p class="project-tools">Tools used: Tool 1, Tool 2, Tool 3</p>
+            <div class="project-card" data-project="capstone" role="button" tabindex="0" aria-label="Open Senior Capstone project">
+                <div class="project-image">
+                    <img src="images/capstone.svg" alt="Senior Capstone preview">
+                </div>
+                <span class="project-label">Full-Stack Development</span>
+                <h4>Senior Capstone</h4>
+                <p>A web-based event platform built with Django and a cloud-hosted database.</p>
+            </div>
+
+            <div class="project-card" data-project="solo-game" role="button" tabindex="0" aria-label="Open Solo Game project">
+                <div class="project-image">
+                    <img src="images/solo-game.svg" alt="Solo Game preview">
+                </div>
+                <span class="project-label">Game Development</span>
+                <h4>Solo Game</h4>
+                <p>An original family card game</p>
+            </div>
         </div>
 
     </section>
+
+    <!-- Project Modal (full project view) -->
+    <div class="project-modal" id="project-modal" hidden>
+        <div class="modal-overlay" data-close></div>
+
+        <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" data-close type="button" aria-label="Close project">&times;</button>
+
+            <!-- Minesweeper: the one filled-out project -->
+            <div class="modal-panel" data-project="minesweeper">
+                <span class="project-label">Game Development</span>
+                <h3 id="modal-title">Minesweeper</h3>
+                <p>A recreation of the classic Minesweeper game. Originally developed in Java using Swing, then adapted into JavaScript to create an interactive version for this website.</p>
+                <p class="ms-instructions">Instructions: Left-click to reveal a cell, right-click to flag it.</p>
+
+                <div class="ms-status">
+                    <span id="ms-mine-count">Mines left: 40</span>
+                    <span id="ms-message"></span>
+                    <button id="ms-restart-btn" type="button">Restart</button>
+                </div>
+
+                <div class="ms-grid" id="ms-grid"></div>
+
+            </div>
+
+            <!-- Placeholder panels -->
+          
+            <div class="modal-panel" data-project="powerbi">
+                <span class="project-label">Data Analytics</span>
+                <h3>Student Analytics Dashboard</h3>
+
+                <video class="modal-video" controls preload="metadata"
+                    src="Videos/PBI%20Whole%20Video.mp4"></video>
+
+                <p class="video-caption">The data displayed is a modified and anonymized version of the original dataset.</p>
+
+                <p class="modal-placeholder">This Power BI dashboard was created to support a statewide pilot program aimed at expanding access to higher education for underprivileged middle and high school students in Illinois. The dashboard provided stakeholders with an intuitive way to track pilot performance based on student participation, demographics, course enrollment, and academic performance across 25 schools and 1,000+ students.</p>
+                <p class="modal-placeholder">The project began with consolidating student and school records from three separate Excel data sources. I cleaned, transformed, and structured the raw datasets into a single structured Excel dataset.</p>
+                <p class="modal-placeholder">Within Power BI, I designed the dashboard from the ground up, creating both the visual layout and the underlying data model. I created custom DAX measures and implemented interactive slicers, allowing users to explore the data by school, department, course, gender, race, and ethnicity. The dashboard also includes key performance metrics, enrollment summaries, and course participation statistics.</p>
+                <p class="modal-placeholder">A key feature of the dashboard is the Azure Maps heat map, which visualizes the geographic distribution of participating schools and students across Illinois, allowing users to quickly identify regional trends and program coverage.</p>
+                <p class="modal-placeholder">Because the report was recreated each semester, I also designed it as a reusable template and created documentation to support future updates.</p>
+            </div>
+
+            <div class="modal-panel" data-project="capstone">
+                <span class="project-label">Full-Stack Development</span>
+                <h3>Senior Capstone</h3>
+                <p class="modal-placeholder">Full project write-up coming soon.</p>
+            </div>
+
+            <div class="modal-panel" data-project="solo-game">
+                <span class="project-label">Game Development</span>
+                <h3>Solo Game</h3>
+                <p class="modal-placeholder">Currently in development. Check it out on Github!</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Contact Section-->
     <section class="contact" id="contact">
@@ -170,6 +257,10 @@
 
 <!-- Connects HTML with js file-->
 <script src="script.js"></script>
+
+<!-- COnnects with Mineswepper Files-->
+<script src="script.js"></script>
+<script src="Minesweeper/minesweeper.js"></script>
 
 <!-- Closes Everything-->
 </body>
