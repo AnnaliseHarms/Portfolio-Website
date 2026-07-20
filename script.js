@@ -89,12 +89,30 @@ if (projectModal) {
                 }
             });
 
+            let isHovering = false;
+
             card.addEventListener("mouseenter", function() {
-                previewVideo.play();
+                isHovering = true;
+                // play() is async; swallow the interruption error a quick
+                // hover-out can cause
+                const playPromise = previewVideo.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(function() {});
+                }
             });
             card.addEventListener("mouseleave", function() {
+                isHovering = false;
                 previewVideo.pause();
                 previewVideo.currentTime = 0.5; // back to the still frame
+            });
+
+            // If a pending play() resolves after the cursor already left
+            // (common on slower-loading videos), stop it right away
+            previewVideo.addEventListener("playing", function() {
+                if (!isHovering) {
+                    previewVideo.pause();
+                    previewVideo.currentTime = 0.5;
+                }
             });
         }
     });
