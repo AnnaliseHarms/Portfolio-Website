@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Senior Capstone preview">
-  <rect width="800" height="500" fill="#5c584f"/>
-  <g fill="none" stroke="#faf8f4" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
-    <path d="M400 150L520 210L400 270L280 210Z"/>
-    <path d="M330 235V300C330 300 360 330 400 330C440 330 470 300 470 300V235"/>
-    <path d="M520 210V285"/>
-  </g>
-  <text x="400" y="420" text-anchor="middle" fill="#faf8f4" font-family="Georgia, serif" font-size="42" font-weight="700">Senior Capstone</text>
-</svg>
