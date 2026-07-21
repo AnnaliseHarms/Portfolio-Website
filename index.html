@@ -35,7 +35,7 @@
     <section class="introduction">
         <h1>Annalise Harms</h1>
         <h2>DATA ANALYTICS • BUSINESS INTELLIGENCE • SOFTWARE DEVELOPMENT</h2>
-        <p>Curiosity is what drew me to computer science, and data is where I've found it most rewarding. I enjoy exploring complex information and turning it into something useful.</p>
+        <p>Insert intro here.</p>
     </section>
 
     <!-- About Section-->
@@ -130,7 +130,16 @@
                 </div>
                 <span class="project-label">Data Analytics</span>
                 <h4>Student Analytics Dashboard</h4>
-                <p>Interactive Power BI dashboard developed to support a statewide pilot program aimed at expanding access to higher education for underprivileged middle and high school students</p>
+                <p>An interactive Power BI dashboard designed to monitor the performance of a statewide higher education pilot program across 25 Illinois schools and more than 1,000 students.</p>
+            </div>
+            
+            <div class="project-card" data-project="Automated Survey Reporting" role="button" tabindex="0" aria-label="Open Automated Survey Reporting project">
+                <div class="project-image">
+                    <img src="images/StudentSurvey.jpg" alt="Automated Survey Reporting preview">
+                </div>
+                <span class="project-label">Data Analytics</span>
+                <h4>Automated Survey Reporting</h4>
+                <p>An automated survey system for collecting and visualizing live stakeholder feedback across 25 schools participating in a statewide higher education pilot program.</p>
             </div>
 
             <div class="project-card" data-project="capstone" role="button" tabindex="0" aria-label="Open Senior Capstone project">
@@ -140,7 +149,7 @@
                 </div>
                 <span class="project-label">Full-Stack Development</span>
                 <h4>Senior Capstone</h4>
-                <p>A web-based event platform built with Django and a cloud-hosted database.</p>
+                <p>Event Radar is a web application designed to make event discovery and planning more intuitive for attendees and organizers.</p>
             </div>
 
             <div class="project-card" data-project="minesweeper" role="button" tabindex="0" aria-label="Open Minesweeper project">
@@ -204,7 +213,25 @@
                 <p class="modal-placeholder">The project began with consolidating student and school records from three separate Excel data sources. I cleaned, transformed, and structured the raw datasets into a single structured Excel dataset.</p>
                 <p class="modal-placeholder">Within Power BI, I designed the dashboard from the ground up, creating both the visual layout and the underlying data model. I created custom DAX measures and implemented interactive slicers, allowing users to explore the data by school, department, course, gender, race, and ethnicity. The dashboard also includes key performance metrics, enrollment summaries, and course participation statistics.</p>
                 <p class="modal-placeholder">A key feature of the dashboard is the Azure Maps heat map, which visualizes the geographic distribution of participating schools and students across Illinois, allowing users to quickly identify regional trends and program coverage.</p>
-                <p class="modal-placeholder">Because the report was recreated each semester, I also designed it as a reusable template and created documentation to support future updates.</p>
+                <p class="modal-placeholder">Because the report was recreated each semester, I also designed a reusable template and created documentation to support future updates. To preserve historical reporting, I developed a Power BI App that allowed stakeholders to access dashboards from previous semesters, making it easy to compare results over time and ensuring past program data remained available.</p>
+            </div>
+
+            <div class="modal-panel" data-project="Automated Survey Reporting">
+                <span class="project-label">Data Analytics</span>
+                <h3>Automated Survey Reporting</h3>
+
+                <video class="modal-video" controls preload="metadata"
+                    src="Videos/PBI%20Whole%20Video.mp4"></video>
+
+                <p class="video-caption">The data displayed is a modified and anonymized version of the original dataset.</p>
+
+                <p class="modal-placeholder">This project was developed to collect and display stakeholder feedback for a statewide higher education pilot program serving 25 schools across Illinois. The solution enabled program leadership to monitor survey responses throughout the survey period, providing visibility into participant experiences and program outcomes.</p>
+                <p class="modal-placeholder">I designed four Microsoft Forms surveys tailored to each stakeholder group: students, parents, teachers (VLF), and school administrators. Each survey was customized to gather relevant feedback from each group.</p>
+                <p class="modal-placeholder">Using Power Automate, I built a workflow that automatically processed each new survey submission and transferred the data into Excel. This ensured dashboards were always populated with the latest responses.</p>
+                <p class="modal-placeholder">Within Power BI, I designed a suite of interactive dashboards for exploring survey results. The reports were automatically updated twice a day for the most updated data. The reports allowed stakeholders to analyze trends by stakeholder group, survey question, and reporting period.</p>
+                <p class="modal-placeholder">To support future reporting cycles, the workflow and dashboards were designed to be reusable, requiring minimal maintenance as new survey responses were submitted. This ensured the reporting process could continue each semester without rebuilding the solution, providing a scalable foundation for ongoing program evaluation. </p>
+                <p class="modal-placeholder">To support future reporting cycles, the workflow and dashboards were designed to be reusable. This created a scalable reporting solution that could be reused each semester without rebuilding the automation or dashboards.</p>
+                <p class="modal-placeholder">*This solution was built prior to Microsoft's June 2024 release of native live Excel synchronization with Microsoft Forms, making Power Automate necessary to automate the data pipeline.</p>
             </div>
 
             <div class="modal-panel" data-project="capstone">
