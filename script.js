@@ -129,6 +129,49 @@ if (projectModal) {
     });
 }
 
+// ---- Automated Survey Reporting: image carousel ----
+const surveyCarousel = document.getElementById("survey-carousel");
+
+if (surveyCarousel) {
+    const slides = surveyCarousel.querySelectorAll(".carousel-slide");
+    const indexLabel = surveyCarousel.querySelector(".carousel-index");
+    const prevBtn = surveyCarousel.querySelector(".carousel-prev");
+    const nextBtn = surveyCarousel.querySelector(".carousel-next");
+    const carouselPanel = surveyCarousel.closest(".modal-panel");
+    let current = 0;
+
+    function showSlide(index) {
+        // wrap around in both directions so the images repeat at either end
+        current = (index + slides.length) % slides.length;
+        slides.forEach(function(slide, i) {
+            slide.classList.toggle("is-active", i === current);
+        });
+        if (indexLabel) {
+            indexLabel.textContent = current + 1;
+        }
+    }
+
+    prevBtn.addEventListener("click", function() { showSlide(current - 1); });
+    nextBtn.addEventListener("click", function() { showSlide(current + 1); });
+
+    // Arrow keys only steer the carousel while its project panel is the open view
+    document.addEventListener("keydown", function(event) {
+        const modalOpen = projectModal && !projectModal.hidden;
+        const panelActive = carouselPanel && carouselPanel.classList.contains("is-active");
+        if (!modalOpen || !panelActive) return;
+
+        if (event.key === "ArrowLeft") {
+            event.preventDefault();
+            showSlide(current - 1);
+        } else if (event.key === "ArrowRight") {
+            event.preventDefault();
+            showSlide(current + 1);
+        }
+    });
+
+    showSlide(0);
+}
+
 // ---- Minesweeper game ----
 const msGrid = document.getElementById("ms-grid");
 
